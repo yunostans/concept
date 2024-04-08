@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Message</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f7eaea;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {a
+            color: #c92442;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #f05252;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        button:hover {
+            background-color: #c92442;
+            transform: scale(1.05); /* Scale up the button on hover */
+        }
+
+        #messageContainer {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #333;
+        }
+
+        .heart {
+            color: #ff4057;
+        }
+
+        .signature {
+            font-style: italic;
+            color: #8a8a8a;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Click the button to view a message!</h1>
+    <button id="loveButton">Click Me!</button>
+    <div id="messageContainer"></div>
+    <p class="signature">With all my love, Chris</p>
+
+    <script>
+        document.getElementById('loveButton').addEventListener('click', function() {
+            showLoveMessage();
+        });
+
+        function showLoveMessage() {
+            let messageContainer = document.getElementById('messageContainer');
+            messageContainer.innerHTML = "<p><span class='heart'>&#10084;</span> I love you Leah and want you to keep your head up we are going to get through this babe! <span class='heart'>&#10084;</span></p>";
+        }
+    </script>
+</body>
+</html>
